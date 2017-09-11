@@ -3,10 +3,10 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
-This project is the implementation of a PID controller.
-I have tuned the parameters "by hand", for a throttle of 0.5 and a screen resolution of 1600x1200 for the simulator. 
-I first began with Kp. I found a suitable value of 15/25, with a little overshoot.
-Then I tuned Kd and I found a value of 2000/25 suitable.
+This project is the implementation of a PID controller.  
+I have tuned the parameters "by hand", for a throttle of 0.5 and a screen resolution of 1600x1200 for the simulator.  
+I first began with Kp. I found a suitable value of 15/25, with a little overshoot.  
+Then I tuned Kd and I found a value of 2000/25 suitable.  
 And I fine tuned Ki with a value of 0.01/25.
 
 ## Dependencies
