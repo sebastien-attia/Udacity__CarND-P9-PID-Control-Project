@@ -4,6 +4,17 @@ Self-Driving Car Engineer Nanodegree Program
 ---
 
 This project is the implementation of a PID controller.  
+
+The [following](https://youtu.be/p9TcN99KPes) video is the result I get with the following parameters:
+Kp=15, Ki=0.01, Kd=2000.
+
+|   Description | Throttle | Parameters | Video |
+|--|--|--|  
+|  Best | 0.5    | Kp=15/25, Ki=0.01/25, Kd=2000/25 | [Video](https://youtu.be/p9TcN99KPes) |
+|  Overshoot | 0.5    | Kp=15/25, Ki=0, Kd=0 | [Video](https://youtu.be/nGXc4bDhNS8) |
+|  Overshoot | 0.5    | Kp=5/25, Ki=0, Kd=0 | [Video](https://youtu.be/5HEifvEfijg) |
+|  Finish OK | 0.5    | Kp=15/25, Ki=0, Kd=0 | [Video](https://youtu.be/5HEifvEfijg) |
+
 I have tuned the parameters "by hand", for a throttle of 0.5 and a screen resolution of 1600x1200 for the simulator.  
 I first began with Kp. I found a suitable value of 15/25, with a little overshoot.  
 Then I tuned Kd and I found a value of 2000/25 suitable.  
