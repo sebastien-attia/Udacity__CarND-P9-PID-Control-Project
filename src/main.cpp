@@ -7,11 +7,6 @@
 // for convenience
 using json = nlohmann::json;
 
-// For converting back and forth between radians and degrees.
-constexpr double pi() { return M_PI; }
-double deg2rad(double x) { return x * pi() / 180; }
-double rad2deg(double x) { return x * 180 / pi(); }
-
 // Checks if the SocketIO event has JSON data.
 // If there is data the JSON object in string format will be returned,
 // else the empty string "" will be returned.
@@ -33,7 +28,7 @@ int main()
   uWS::Hub h;
 
   PID pid;
-  pid.Init(15, 0.01, 2000);
+  pid.Init(0.2617, 0.0002, 34.89);
 
   h.onMessage([&pid](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {
     // "42" at the start of the message means there's a websocket message event.
@@ -53,7 +48,7 @@ int main()
           double steer_value;
           {
             pid.UpdateError(cte);
-            steer_value = pid.Output();
+            steer_value = pid.TotalError();
           }
 
           // DEBUG

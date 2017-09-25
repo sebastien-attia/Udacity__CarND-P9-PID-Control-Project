@@ -36,12 +36,6 @@ public:
   * Update the PID error variables given cross track error.
   */
   void UpdateError(double cte);
-  //void Twiddle();
-
-  /*
-  * Output
-  */
-  double Output();
 
   /*
   * Calculate the total PID error.
@@ -50,7 +44,6 @@ public:
 
 private:
   double maxSteering;
-  bool isFirdtIter;
 };
 
 #endif /* PID_H */
